@@ -1,11 +1,59 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #333;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            padding-top: 60px; /* Evita que o conteúdo da página fique escondido debaixo do menu fixo */
+            background: linear-gradient(135deg, black 0%, white 100%)
+        }
+
+        .barraNaveg {
+            background-color: #cec5c5;
+            position: fixed;              /* Fixa o menu no topo ao rolar a página */
+            top: 0;
+            left: 0;
+            width: 100%;                  /* Ocupa toda a largura do ecrã */
+            height: 70px;                 /* Altura da barra */
+            display: flex;                /* Ativa o Flexbox */
+            align-items: center;          /* Alinha os itens verticalmente ao centro */
+            justify-content: space-between; /* Separa o logótipo dos links */
+            padding: 0 20px;              /* Espaçamento interno nas laterais */
+            z-index: 1000;                /* Garante que o menu fica sempre por cima de outros elementos */
+        }
+
+        .logo a {
+            color: #da0e0e;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* 3. Estilo da lista de links (Menu Horizontal) */
+        .menu-links {
+            display: flex;                /* Coloca os itens da lista lado a lado (horizontal) */
+            list-style: none;             /* Remove os pontos/bullets da lista */
+        }
+
+        /* Espaçamento entre os itens do menu */
+        .menu-links li {
+            margin-left: 20px;
+        }
+
+        /* 4. Estilo dos links individuais */
+        .menu-links a {
+            color: #fff;                  /* Cor do texto branca */
+            text-decoration: none;        /* Remove o sublinhado dos links */
+            font-size: 16px;
+            padding: 8px 12px;
+            transition: 0.3s;             /* Efeito suave ao passar o rato */
+            border-radius: 4px;
+        }
+
+        /* Efeito de destaque ao passar o rato (Hover) */
+        .menu-links a:hover {
+            background-color: #555;       /* Fundo cinza mais claro */
+            color: #4CAF50;               /* Muda a cor do texto (ex: verde) */
+        }
