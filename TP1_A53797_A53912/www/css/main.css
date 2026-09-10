@@ -1,3 +1,7 @@
+:root {
+  --verde-principal: #2a9134;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -37,7 +41,6 @@ body {
 
 .navbar {
   font-family: "Poppins", sans-serif;
-  top: 50px;
   background: linear-gradient(90deg, #3954cb, #ea755b) !important;
   border-bottom: 2px solid #2a9134;
   transition: 0.4s;
@@ -121,9 +124,45 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 95%);
 }
 
+.carousel-item img {
+  height: 60vh;
+  object-fit: cover;
+}
+
+.carousel-indicators {
+  bottom: 80px;
+}
+
+@media (max-width: 1px) {
+  .carousel-item {
+    min-height: 80vh;
+  }
+
+  .carousel-item img {
+    height: 80vh;
+  }
+
+  
+  .carousel-indicators {
+    bottom: -3px;
+  }
+}
+
 .carousel-caption {
   z-index: 2;
   top: 50%;
   bottom: auto;
   transform: translateY(-50%);
+}
+
+.btn-slideshow {
+  background-color: var(--verde-principal);
+  color: #ffffff;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.btn-slideshow:hover {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  transform: translateY(-6px);
 }
