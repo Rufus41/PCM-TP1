@@ -1,5 +1,5 @@
 <!doctype html>
-< lang="pt">
+<html lang="pt">
   <head>
     <title>O Meu Portfolio</title>
     <!-- Required meta tags -->
@@ -19,37 +19,61 @@
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/main.css">
   </head>
-  <>
 
-    <!-- Estrutura do Menu de Navegação -->
-    <nav class="barraNaveg">
-        <div class="logo">
-            <a href="#Portfolio">Portfolio</a>
+  <body>
+
+    <div class="topbar d-flex justify-content-between align-items-center px-3 py-1">
+      <div class="icons-sociais d-flex align-items-center">
+        <div class="icone-facebook me-2">
+          <a href="https://facebook.com"><i class="fa-brands fa-facebook fa-2x"></i></a>
         </div>
-        <ul class="menu-links">
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
+         <div class="icone-twitter me-2">
+           <a href="https://twitter.com"><i class="fa-brands fa-twitter fa-2x"></i></a>
+         </div>
+          <div class="icone-instagram me-2">
+            <a href="https://instagram.com"><i class="fa-brands fa-instagram fa-2x"></i></a>
+          </div>
+           <div class="icone-youtube me-2">
+             <a href="https://youtube.com"><i class="fa-brands fa-youtube fa-2x"></i></a>
+           </div>
+      </div>
+      <small class="direitos-reservados fs-6"><i class="fa-regular fa-registered"></i> Todos os direitos reservados.</small>
+    </div>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#home">Nome a mudar</a>
+
+        <!-- Botão que aparece para ecrã abaixo de 992px -->
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </button>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#home"> Home </a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills"> Skills </a></li>
+            <li class="nav-item"><a class="nav-link" href="#about"> About </a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> Projects </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#project1"> Project 1 </a></li>
+                <li><a class="dropdown-item" href="#project2"> Project 2 </a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact Me</a></li>
+          </ul>
+        </div>
+
+      </div>  
     </nav>
 
 
 
 
-    
-    <!-- Conteúdo simulado da página -->
-    <div style="padding: 20px;">
-        <h2>Bem-vindo ao site</h2>
-        <p>O menu acima vai continuar fixo no topo mesmo que role a página para baixo.</p>
-    </div>
-
-
-
-
-
-    <!-- Script não sei do que ainda do Stor-->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

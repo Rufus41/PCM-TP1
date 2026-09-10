@@ -1,59 +1,93 @@
-        * {
-            margin: 0;
+        body {
+            margin:0;
             padding: 0;
+            font-family: Arial, sans-serif;
             box-sizing: border-box;
         }
-        
-        body {
-            font-family: Arial, sans-serif;
-            padding-top: 60px; /* Evita que o conteúdo da página fique escondido debaixo do menu fixo */
-            background: linear-gradient(135deg, black 0%, white 100%)
+
+        .topbar { 
+            background: linear-gradient(135deg, #3954cb, #ea755b) !important;
+            height: 50px;
         }
 
-        .barraNaveg {
-            background-color: #cec5c5;
-            position: fixed;              /* Fixa o menu no topo ao rolar a página */
-            top: 0;
-            left: 0;
-            width: 100%;                  /* Ocupa toda a largura do ecrã */
-            height: 70px;                 /* Altura da barra */
-            display: flex;                /* Ativa o Flexbox */
-            align-items: center;          /* Alinha os itens verticalmente ao centro */
-            justify-content: space-between; /* Separa o logótipo dos links */
-            padding: 0 20px;              /* Espaçamento interno nas laterais */
-            z-index: 1000;                /* Garante que o menu fica sempre por cima de outros elementos */
+        .icons-sociais a { transition: color 0.3s ease; }
+        .icons-sociais a:hover { color: #000000 !important; }
+
+        .icone-facebook a{ color:#1877F2}
+        .icone-twitter a{ color:#1DA1F2}
+        .icone-instagram a { color: #E1306C}
+        .icone-youtube a{ color:#FF0000}
+
+        .direitos-reservados{ 
+            color:#ffffff;
+            font-family: "Comic Sans MS", sans-serif;;
         }
 
-        .logo a {
-            color: #da0e0e;
-            text-decoration: none;
-            font-size: 24px;
-            font-weight: bold;
+        .navbar{
+            top: 50px;
+            background: linear-gradient(90deg, #3954cb, #ea755b) !important;
+            border-bottom:2px solid #2a9134;
+            transition:0.4s;
         }
 
-        /* 3. Estilo da lista de links (Menu Horizontal) */
-        .menu-links {
-            display: flex;                /* Coloca os itens da lista lado a lado (horizontal) */
-            list-style: none;             /* Remove os pontos/bullets da lista */
+        .navbar-brand{
+            color:#2a9134 !important;
+            font-size:28px;
+            font-weight:bold;
+            border:2px solid #2a9134;
+            padding:5px 15px;
         }
 
-        /* Espaçamento entre os itens do menu */
-        .menu-links li {
-            margin-left: 20px;
+        .navbar-brand:hover{
+            color:white !important;
+            background:#2a9134;
         }
 
-        /* 4. Estilo dos links individuais */
-        .menu-links a {
-            color: #fff;                  /* Cor do texto branca */
-            text-decoration: none;        /* Remove o sublinhado dos links */
-            font-size: 16px;
-            padding: 8px 12px;
-            transition: 0.3s;             /* Efeito suave ao passar o rato */
-            border-radius: 4px;
+        .nav-link{
+            color:white !important;
+            font-size:18px;
+            margin-left:20px;
+            transition:.3s;
         }
 
-        /* Efeito de destaque ao passar o rato (Hover) */
-        .menu-links a:hover {
-            background-color: #555;       /* Fundo cinza mais claro */
-            color: #4CAF50;               /* Muda a cor do texto (ex: verde) */
+        .nav-link:hover{ color:#2a9134 !important;}
+
+        .nav-link.active{
+            color:#2a9134 !important;
+            font-weight:bold;
         }
+
+        .dropdown-menu{
+            background:#202020;
+            border:1px solid #2a9134;
+        }
+
+        .dropdown-item{ color:white;}
+
+        .dropdown-item:hover{
+            background:#2a9134;
+            color:white;
+        }
+
+        .bar1,
+        .bar2,
+        .bar3 {
+        width: 23px;
+        height: 2px;
+        margin: 5px;
+        background: #2a9134;
+        transition: all 0.5s ease;
+        }
+
+        .change .bar1{
+        transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .change .bar2{
+        opacity: 0;
+        }
+
+        .change .bar3{
+        transform: rotate(45deg) translate(-5px, -8px);
+        }
+
