@@ -305,3 +305,27 @@ header {
   background-attachment: fixed;
 
 }
+
+.about-content{
+  margin-top : 10px;
+
+}
+
+.about-image{
+
+  transform: translate(-40px, 50px) scale(1.1);
+  transform-origin: bottom left;
+}
+
+.btn-resume {
+  background-color: var(--verde-principal);
+  color: white;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-resume:hover {
+  background-color: #1c1c1c;
+  color: white;
+  transform: translateY(-6px);
+}
