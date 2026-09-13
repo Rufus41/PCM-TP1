@@ -184,6 +184,7 @@ header {
   position: relative;
 }
 
+
 .skills-section::before {
   content: "";
   position: absolute;
@@ -297,4 +298,10 @@ header {
 }
 .skill-card-4 .skill-icon { 
   background: linear-gradient(135deg, #ea755b, #f2a154); 
+}
+
+.about-section {
+  background: radial-gradient(circle at 15% 20%, #2c2a4a 0%, #1c1a30 45%, #151326 100%);
+  background-attachment: fixed;
+
 }
