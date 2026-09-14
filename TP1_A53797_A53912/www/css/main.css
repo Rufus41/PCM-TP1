@@ -306,26 +306,79 @@ header {
 
 }
 
-.about-content{
-  margin-top : 10px;
-
+.about-content {
+  margin-top: 25px;
+  transform: scale(1.10);
+  transform-origin: bottom left;
+  translate: translateY(50px, 120px);
 }
 
-.about-image{
+.about-image {
+  max-width: 95%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
 
-  transform: translate(-40px, 50px) scale(1.1);
-  transform-origin: bottom left;
+.about-description {
+  max-width: 500px;
+  margin: 0 auto 25px;
+  color: #d5d2e3;
+  line-height: 1.6;
+}
+
+.progress-group {
+  position: relative;
+  padding: 55px;
+  z-index: 1;
+}
+
+.progress-group::before {
+  content: "";
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background: radial-gradient(circle, rgba(122, 79, 181, 0.32) 0%, rgba(122, 79, 181, 0.15) 55%, rgba(122, 79, 181, 0) 72%);
+
+  z-index: -1;
+}
+
+.progress-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.progress-row .progress {
+  flex: 1;
+}
+
+.progress-value {
+  min-width: 45px;
+  text-align: right;
+  color: white;
 }
 
 .btn-resume {
-  background-color: var(--verde-principal);
+  background: var(--verde-principal);
   color: white;
   border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-weight: 500;
   transition: 0.3s;
 }
 
 .btn-resume:hover {
-  background-color: #1c1c1c;
+  background: #1c1c1c;
   color: white;
-  transform: translateY(-6px);
+  transform: translateY(-5px);
 }
