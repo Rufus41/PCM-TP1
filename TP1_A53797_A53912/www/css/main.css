@@ -19,6 +19,11 @@ body {
   height: 50px;
 }
 
+.bottom-bar {
+  background: linear-gradient(135deg, #3954cb, #ea755b) !important;
+  height: 50px;
+}
+
 .icons-sociais a {
   transition: color 0.3s ease;
 }
