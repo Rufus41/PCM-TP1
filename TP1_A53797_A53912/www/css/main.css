@@ -224,14 +224,14 @@ header {
   z-index: 1;
 }
 
-.skills-eyebrow {
+.preTitle-eyebrow {
   font-size: 12px;
   letter-spacing: 3px;
   color: #d9a0b5;
   text-transform: uppercase;
 }
 
-.skills-subtitle {
+.subtitle {
   color: #b7b4c9;
 }
 
@@ -345,6 +345,8 @@ header {
 
 .progress-row .progress {
   flex: 1;
+  background-color: #32294a !important;
+  overflow: visible !important;
 }
 
 .progress-value {
@@ -388,18 +390,22 @@ header {
 
 .bar-html {
   background-color: #e34c26;
+  box-shadow: 0 0 8px #e34c26, 0 0 20px rgba(227, 76, 38, 0.8);
 }
 
 .bar-python {
   background-color: #3776ab;
+  box-shadow: 0 0 8px #3776ab, 0 0 20px rgba(55, 118, 171, 0.8);
 }
 
 .bar-java {
   background-color: #f89820;
+  box-shadow: 0 0 8px #f89820, 0 0 10px rgba(248, 152, 32, 0.8);
 }
 
 .bar-css {
   background-color: #531bd8;
+  box-shadow: 0 0 8px #531bd8, 0 0 20px rgba(83, 27, 216, 0.8);
 }
 
 @keyframes fillBar {
@@ -413,7 +419,7 @@ header {
 }
 
 .btn-resume {
-  background: var(--verde-principal);
+  background: var(--verde-principal); 
   color: white;
   border: none;
   border-radius: 8px;
@@ -426,4 +432,68 @@ header {
   background: #1c1c1c;
   color: white;
   transform: translateY(-5px);
+}
+
+.contact-bg {
+  background-image:
+    linear-gradient(rgba(26, 16, 50, 0.7), rgba(26, 16, 50, 0.7)), url("../images/contactMe.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-top: 7rem !important;
+  padding-bottom: 10rem !important;
+}
+
+.contact-title {
+  font-family: "Pacifico", cursive;
+  font-weight: 750;
+  font-size: clamp(3rem, 8vw, 6rem);
+  color: #1000f1;
+  text-shadow: 0 0 10px rgb(255, 255, 255), 0 0 35px rgba(42, 145, 52, 0.35);
+  line-height: 1.1;
+}
+
+.contact-preTitle-eyebrow{
+  font-family: "Pacifico", cursive;
+  color: #d795ad;
+  font-size: 30px;
+}
+.btn-back-top-lg {
+  width: 60px;
+  height: 60px;
+  font-size: 22px;
+}
+
+.contact-input,
+.contact-input:focus {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #ffffff;
+  border-radius: 0;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.contact-input::placeholder {
+  color: rgba(255, 255, 255, 0.65);
+  font-style: italic;
+}
+
+.contact-input:focus {
+  border-bottom-color: var(--verde-principal);
+}
+
+.btn-submit {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  border-radius: 0;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: var(--verde-principal);
+  border-color: var(--verde-principal);
+  color: #ffffff;
+  transform: translateY(-3px);
 }
