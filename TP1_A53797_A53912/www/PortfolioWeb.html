@@ -277,38 +277,174 @@
       </section>
       
       <!-- 6. Projects vai aqui -->
-      <section id="projects">
-          <div class="container text-center">
+    <section id="projects" class="projects-section py-5">
 
-          <h2> Projects </h2>
-          <h4> Some projects I developed </h4>
+  <div class="container text-center">
 
+    <span class="preTitle-eyebrow">What I created</span>
+    <h2 class="text-white mt-2"> Projects </h2>
+    <h4 class="subtitle mb-3"> Some projects I developed </h4>
+
+    <a href="#home" class="btn btn-back-top rounded-circle"> <i class="fa-solid fa-paste"></i> </a>
+
+    <div class="row g-4 mt-4">
+
+
+      <div id="project1" class="col-12 col-md-6 col-lg-4 project-target">
+
+        <div class="card project-card h-100">
+
+          <div class="project-image-container" data-bs-toggle="modal" data-bs-target="#modalProject1">
+
+            <img src="images/Car_Race_Image.png" class="card-img-top" alt="Car Race">
+            <div class="image-overlay">
+
+              <i class="fa-solid fa-magnifying-glass"></i>
+
+            </div>
           </div>
-      </section>
 
-      <section id="project1">
-          <div class="container text-center">
+          <div class="card-body"> 
+            <h5 class="card-title">Car Race</h5>
 
-          <h2> Car Race </h2>
-
+            <p class="card-text"> A 2D racing simulation developed in Python using the Pygame library. 
+              The project involved implementing an automatically driven car following 
+              a predefined track through configurable movement parameters and custom visual assets. </p>
           </div>
-      </section>
 
-      <section id="project2">
-          <div class="container text-center">
+        </div>
+      </div>
 
-          <h2> Ultimate Tic-Tac-Toe </h2>
 
+      <!-- PROJECT 2 -->
+      <div id="project2"
+           class="col-12 col-md-6 col-lg-4 project-target">
+
+        <div class="card project-card h-100">
+          <div class="project-image-container" data-bs-toggle="modal" data-bs-target="#modalProject2">
+
+            <img src="images/Ultimate_Tic_Tac_Toe_Image.png" class="card-img-top" alt="Ultimate Tic-Tac-Toe">
+            <div class="image-overlay">
+
+              <i class="fa-solid fa-magnifying-glass"></i>
+
+            </div>
           </div>
-      </section>
+          
+          <div class="card-body">
+            <h5 class="card-title">Ultimate Tic-Tac-Toe</h5>
 
-      <section id="project3">
-          <div class="container text-center">
-
-          <h2> Online Game Shop </h2>
-
+            <p class="card-text"> Galisseia is an Ultimate Tic-Tac-Toe adventure that introduces a multi-layered board system, 
+              combining nine interconnected Tic-Tac-Toe grids into a larger strategic challenge.
+              The game includes Pseudo-AI opponents, Campaign, Training and Friendly modes, progressive difficulty, 
+              power-ups and unlockable content. The Campaign Mode was partially inspired by the journey structure of The Odyssey. </p>
           </div>
-      </section>
+
+        </div>
+      </div>
+
+
+      <!-- PROJECT 3 -->
+      <div id="project3"
+           class="col-12 col-md-6 col-lg-4 project-target">
+
+        <div class="card project-card h-100">
+
+          <div class="project-image-container" data-bs-toggle="modal" data-bs-target="#modalProject3">
+
+            <img src="images/Online_Game_Shop_Image.png" class="card-img-top" alt="Online_Game_Shop">
+            <div class="image-overlay">
+
+              <i class="fa-solid fa-magnifying-glass"></i>
+
+            </div>
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">Online Game Shop</h5>
+
+            <p class="card-text"> A digital game store application inspired by platforms such as Steam. 
+              The project includes separate Client and Admin modes, allowing users to purchase games, manage libraries, 
+              write reviews and ratings, while administrators can manage products and user content. </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="modal fade" id="modalProject1" tabindex="-1">
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+
+      <div class="modal-content bg-dark">
+
+        <div class="modal-header border-0">
+
+          <h5 class="modal-title text-white"> Car Race </h5>
+
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body text-center">
+          <img src="images/Car_Race_Image.png" class="img-fluid" alt="Car Race">
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="modal fade" id="modalProject2" tabindex="-1">
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+
+      <div class="modal-content bg-dark">
+
+        <div class="modal-header border-0">
+
+          <h5 class="modal-title text-white"> Ultimate Tic-Tac-Toe (Galisseia) </h5>
+
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body text-center">
+          <img src="images/Ultimate_Tic_Tac_Toe_Image.png" class="img-fluid" alt="Ultimate Tic-Tac-Toe">
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="modal fade" id="modalProject3" tabindex="-1">
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+
+      <div class="modal-content bg-dark">
+
+        <div class="modal-header border-0">
+
+          <h5 class="modal-title text-white"> Online Game Shop </h5>
+
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body text-center">
+          <img src="images/Online_Game_Shop_Image.png" class="img-fluid" alt="Online Game Shop">
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
       <section id="contact" class="py-5 contact-bg">
           <div class="container text-center">
