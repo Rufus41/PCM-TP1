@@ -134,18 +134,19 @@ header {
     #2c2a4a 0%,
     #1c1a30 45%,
     #151326 100%
-  );
-  background-attachment: fixed;
-}
-.carousel-item::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(42, 145, 52, 0.35);
-  z-index: 1;
-}
-
-.carousel-item {
+    );
+    background-attachment: fixed;
+  }
+  
+  .carousel-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(42, 145, 52, 0.35);
+    z-index: 1;
+  }
+  
+  .carousel-item {
   min-height: 60vh;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 95%);
 }
@@ -160,10 +161,11 @@ header {
 }
 
 @media (max-width: 1px) {
+  
   .carousel-item {
     min-height: 80vh;
   }
-
+  
   .carousel-item img {
     height: 80vh;
   }
@@ -180,27 +182,57 @@ header {
   transform: translateY(-50%);
 }
 
-.btn-slideshow {
+.general-button {
   background-color: var(--verde-principal);
   color: #ffffff;
   border: none;
   transition:
     background-color 0.3s ease,
     transform 0.3s ease;
-}
-.btn-slideshow:hover {
+  }
+
+.general-button:hover {
   background-color: #1c1c1c;
   color: #ffffff;
   transform: translateY(-6px);
 }
 
+.btn-back-top {
+  width: 44px;
+  height: 44px;
+  background: var(--verde-principal);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.btn-back-top:hover {
+  color: #ffffff;
+  transform: translateY(-6px);
+}
+
+.btn-submit {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  border-radius: 0;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+  
+.btn-submit:hover {
+  background-color: var(--verde-principal);
+  border-color: var(--verde-principal);
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
 .skills-section {
-  background: radial-gradient(
-    circle at 15% 20%,
-    #2c2a4a 0%,
-    #1c1a30 45%,
-    #151326 100%
-  );
+  background: radial-gradient(circle at 15% 20%, #2c2a4a 0%, #1c1a30 45%, #151326 100%);
   background-attachment: fixed;
   position: relative;
 }
@@ -213,11 +245,7 @@ header {
   width: 220px;
   height: 220px;
   border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(193, 84, 111, 0.45),
-    transparent 70%
-  );
+  background: radial-gradient(circle, rgba(193, 84, 111, 0.45), transparent 70%);
   pointer-events: none;
 }
 
@@ -249,21 +277,6 @@ header {
   color: #b7b4c9;
 }
 
-.btn-back-top {
-  width: 44px;
-  height: 44px;
-  background: var(--verde-principal);
-  color: #ffffff;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease;
-}
-
-.btn-back-top:hover {
-  color: #ffffff;
-  transform: translateY(-6px);
-}
 
 .skill-card {
   background: rgba(255, 255, 255, 0.06);
@@ -323,17 +336,13 @@ header {
 .skill-card-4 {
   border-top-color: #ea755b;
 }
+
 .skill-card-4 .skill-icon {
   background: linear-gradient(135deg, #ea755b, #f2a154);
 }
 
 .about-section {
-  background: radial-gradient(
-    circle at 15% 20%,
-    #2c2a4a 0%,
-    #1c1a30 45%,
-    #151326 100%
-  );
+  background: radial-gradient(circle at 15% 20%, #2c2a4a 0%, #1c1a30 45%, #151326 100%);
   background-attachment: fixed;
 }
 
@@ -450,7 +459,6 @@ header {
 }
 
 @media (max-width: 768px) {
-
   .about-content {
     transform: none;
     margin-top: 25px;
@@ -497,7 +505,12 @@ header {
 }
 
 .projects-section {
-  background: radial-gradient(circle at 15% 20%, #2c2a4a 0%, #1c1a30 45%, #151326 100%);
+  background: radial-gradient(
+    circle at 15% 20%,
+    #2c2a4a 0%,
+    #1c1a30 45%,
+    #151326 100%
+  );
   background-attachment: fixed;
 }
 
@@ -512,18 +525,23 @@ header {
 }
 
 .project-card .card-text {
-  color: rgba(255,255,255,0.75);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .projects-section {
-  background: radial-gradient( circle at 15% 20%, #2c2a4a 0%, #1c1a30 45%, #151326 100%);
+  background: radial-gradient(
+    circle at 15% 20%,
+    #2c2a4a 0%,
+    #1c1a30 45%,
+    #151326 100%
+  );
   background-attachment: fixed;
 }
 
 .project-card {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.15);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 20px;
   overflow: hidden;
   color: white;
@@ -532,7 +550,7 @@ header {
 
 .project-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 0 25px rgba(40,150,70,0.35);
+  box-shadow: 0 0 25px rgba(40, 150, 70, 0.35);
 }
 
 .project-image-container {
@@ -557,37 +575,37 @@ header {
   height: 65px;
   border-radius: 50%;
   background: rgba(40, 150, 70, 0.85);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  opacity:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
   transition: all 0.3s ease;
 }
 
 .image-overlay i {
-  color:white;
-  font-size:25px;
+  color: white;
+  font-size: 25px;
 }
 
 .project-image-container:hover .image-overlay {
-  opacity:1;
+  opacity: 1;
 }
 
 .project-image-container:hover .project-image {
-  transform:scale(1.1);
+  transform: scale(1.1);
 }
 
 .image-overlay:hover {
   transform: translate(-50%, -50%) scale(1.15);
-  box-shadow: 0 0 20px rgba(40,150,70,0.8);
+  box-shadow: 0 0 20px rgba(40, 150, 70, 0.8);
 }
 
 .modal-body img {
-  max-height:80vh;
+  max-height: 80vh;
 }
 
 .project-target {
-  scroll-margin-top:120px;
+  scroll-margin-top: 120px;
 }
 
 .project-target:target .project-card {
@@ -595,23 +613,23 @@ header {
 }
 
 @keyframes projectHighlight {
-
   0% {
-    box-shadow:0 0 0 rgba(0,123,255,0);
+    box-shadow: 0 0 0 rgba(0, 123, 255, 0);
   }
 
   50% {
-    box-shadow: 0 0 35px rgba(0,123,255,0.9);
+    box-shadow: 0 0 35px rgba(0, 123, 255, 0.9);
   }
 
   100% {
-    box-shadow: 0 0 0 rgba(0,123,255,0);
+    box-shadow: 0 0 0 rgba(0, 123, 255, 0);
   }
-
 }
 
 .contact-bg {
-  background-image: linear-gradient(rgba(26, 16, 50, 0.7), rgba(26, 16, 50, 0.7)), url("../images/contactMe.png");
+  background-image:
+    linear-gradient(rgba(26, 16, 50, 0.7), rgba(26, 16, 50, 0.7)),
+    url("../images/contactMe.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -658,22 +676,4 @@ header {
 
 .contact-input:focus {
   border-bottom-color: var(--verde-principal);
-}
-
-.btn-submit {
-  background-color: transparent;
-  border: 2px solid #ffffff;
-  color: #ffffff;
-  border-radius: 0;
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease;
-}
-
-.btn-submit:hover {
-  background-color: var(--verde-principal);
-  border-color: var(--verde-principal);
-  color: #ffffff;
-  transform: translateY(-3px);
 }
