@@ -14,14 +14,10 @@ body {
   overflow-x: hidden;
 }
 
-.topbar {
-  background: linear-gradient(135deg, #3954cb, #ea755b) !important;
-  height: 50px;
-}
-
+.topbar,
 .bottom-bar {
   background: linear-gradient(135deg, #3954cb, #ea755b) !important;
-  height: 50px;
+  min-height: 50px;
 }
 
 .icones-sociais a {
@@ -136,25 +132,28 @@ header {
   transform: rotate(45deg) translate(-5px, -8px);
 }
 
-#home {
+#home,
+.skills-section,
+.about-section,
+.projects-section {
   background: radial-gradient(
     circle at 15% 20%,
     #2c2a4a 0%,
     #1c1a30 45%,
     #151326 100%
-    );
-    background-attachment: fixed;
-  }
-  
-  .carousel-item::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(42, 145, 52, 0.35);
-    z-index: 1;
-  }
-  
-  .carousel-item {
+  );
+  background-attachment: fixed;
+}
+
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(42, 145, 52, 0.35);
+  z-index: 1;
+}
+
+.carousel-item {
   min-height: 60vh;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 95%);
 }
@@ -166,21 +165,6 @@ header {
 
 .carousel-indicators {
   bottom: 80px;
-}
-
-@media (max-width: 1px) {
-  
-  .carousel-item {
-    min-height: 80vh;
-  }
-  
-  .carousel-item img {
-    height: 80vh;
-  }
-
-  .carousel-indicators {
-    bottom: -3px;
-  }
 }
 
 .carousel-caption {
@@ -199,10 +183,14 @@ header {
     transform 0.3s ease;
   }
 
-.general-button:hover {
-  background-color: #1c1c1c;
+.general-button:hover,
+.btn-back-top:hover {
   color: #ffffff;
   transform: translateY(-6px);
+}
+
+.general-button:hover {
+  background-color: #1c1c1c;
 }
 
 .btn-back-top {
@@ -214,11 +202,6 @@ header {
   align-items: center;
   justify-content: center;
   transition: transform 0.3s ease;
-}
-
-.btn-back-top:hover {
-  color: #ffffff;
-  transform: translateY(-6px);
 }
 
 .btn-submit {
@@ -240,8 +223,6 @@ header {
 }
 
 .skills-section {
-  background: radial-gradient(circle at 15% 20%, #2c2a4a 0%, #1c1a30 45%, #151326 100%);
-  background-attachment: fixed;
   position: relative;
 }
 
@@ -350,8 +331,7 @@ header {
 }
 
 .about-section {
-  background: radial-gradient(circle at 15% 20%, #2c2a4a 0%, #1c1a30 45%, #151326 100%);
-  background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 .about-content {
@@ -494,6 +474,11 @@ header {
     min-width: 40px;
     font-size: 16px;
   }
+
+  .navbar-brand {
+    font-size: 20px;
+    padding: 4px 10px;
+  }
 }
 
 .btn-resume {
@@ -510,16 +495,6 @@ header {
   background: #1c1c1c;
   color: white;
   transform: translateY(-5px);
-}
-
-.projects-section {
-  background: radial-gradient(
-    circle at 15% 20%,
-    #2c2a4a 0%,
-    #1c1a30 45%,
-    #151326 100%
-  );
-  background-attachment: fixed;
 }
 
 .project-card img {
@@ -626,6 +601,12 @@ header {
   background-attachment: fixed;
   padding-top: 7rem !important;
   padding-bottom: 10rem !important;
+}
+
+@media (max-width: 768px) {
+  .contact-bg {
+    background-attachment: scroll;
+  }
 }
 
 .contact-title {
