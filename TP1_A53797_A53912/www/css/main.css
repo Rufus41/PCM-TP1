@@ -1,5 +1,5 @@
 :root {
-  --verde-principal: #2a9134;
+  --verde-principal: #7a4fb5;
 }
 
 html {
@@ -16,7 +16,7 @@ body {
 
 .topbar,
 .bottom-bar {
-  background: linear-gradient(135deg, #3954cb, #ea755b) !important;
+  background: linear-gradient(90deg, #3311de, #40043a) !important;
   min-height: 50px;
 }
 
@@ -55,8 +55,8 @@ body {
 
 .navbar {
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(90deg, #3954cb, #ea755b) !important;
-  border-bottom: 2px solid #2a9134;
+  background: linear-gradient(90deg, #3311de, #40043a) !important;
+  border-bottom: 2px solid #632ac5;
   transition: 0.4s;
   position: sticky;
   top: 0;
@@ -68,16 +68,16 @@ header {
 }
 
 .navbar-brand {
-  color: #2a9134 !important;
+  color: #632ac5 !important;
   font-size: 28px;
   font-weight: bold;
-  border: 2px solid #2a9134;
+  border: 2px solid #632ac5;
   padding: 5px 15px;
 }
 
 .navbar-brand:hover {
   color: white !important;
-  background: #2a9134;
+  background: #632ac5;
 }
 
 .nav-link {
@@ -241,7 +241,7 @@ header {
 .skills-section::after {
   content: "";
   position: absolute;
-  bottom: -40px;
+  bottom: -140px;
   left: -20px;
   width: 260px;
   height: 260px;
@@ -252,7 +252,7 @@ header {
 
 .skills-section .container {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .preTitle-eyebrow {
