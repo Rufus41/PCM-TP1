@@ -16,7 +16,7 @@ body {
 
 .topbar,
 .bottom-bar {
-  background: linear-gradient(90deg, #3311de, #40043a) !important;
+  background: linear-gradient(90deg, #2A0FE0 0%, #6C1AC7 60%, #3A0A6E 100%);
   min-height: 50px;
 }
 
@@ -55,7 +55,7 @@ body {
 
 .navbar {
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(90deg, #3311de, #40043a) !important;
+  background: linear-gradient(90deg, #2A0FE0 0%, #6C1AC7 60%, #3A0A6E 100%);
   border-bottom: 2px solid #632ac5;
   transition: 0.4s;
   position: sticky;
