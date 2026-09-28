@@ -1,47 +1,47 @@
-:root { /* Root é o elemento mais alto que permite guardar variáveis para usar em diversos elementos*/
-  --roxo-principal: #7a4fb5; /* define-se uma variável fixa com a cor roxo*/
+:root { /* Root é o elemento mais alto que permite guardar variáveis para usar em diversos elementos */
+  --roxo-principal: #7a4fb5; /* define-se uma variável fixa com a cor roxo */
 }
 
 html {
-  scroll-padding-top: 85px;
+  scroll-padding-top: 85px; /* define que ao navegar para uma secção vai navegar para uma area 85 pixeis a cima antes desse elemento para definir o espaço da navbar */
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-  box-sizing: border-box;
-  overflow-x: hidden;
-  background: radial-gradient(circle at 15% 20%, #2c2a4a 0%, #1c1a30 45%, #151326 100%);
+  margin: 0; /* define o tamanho da margem a 0 */
+  padding: 0; /* define o espaçamento interno a 0 */
+  font-family: "Poppins", sans-serif; /* tipo de letra usado senão encontrar a 1º usa a 2º como garantia */
+  box-sizing: border-box; /* define o tamanho numa caixa (box) de padding e border para que não saia fora e desconfigure a página */
+  overflow-x: hidden; /* caso o texto extenda-se na horizontal a barra de scroll horizontal fica escondida */
+  background: radial-gradient(circle at 15% 20%, #2c2a4a 0%, #1c1a30 45%, #151326 100%); /* define o fundo da página inteira */
 }
 
 .topbar, 
 .bottom-bar {
-  background: linear-gradient(90deg, #2A0FE0 0%, #6C1AC7 60%, #3A0A6E 100%);
-  min-height: 50px;
+  background: linear-gradient(90deg, #2A0FE0 0%, #6C1AC7 60%, #3A0A6E 100%); /* Gradiente linear em forma de reta (90° vai da Esq para Dir) com paragens em 0%, 60% e 100% */
+  min-height: 50px; /* define um tamanho minimo de 50 píxeis, se o texto passar em telemóveis a barra aumenta, mas nunca é menos de 50 */
 }
 
-.icones-sociais a {
-  border: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+.icones-sociais a { /* o "a" refere-se a anchor servindo de hiperligação, se fosse só ".icones-sociais" iria ser aplicado os efeitos à divisão e não a cada icon */
+  border: none; /* remove a borda dos elementos */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* cria uma animação suave que muda de cor em 0.3s suavemente (ease) e faz uma transformação que definimos depois */
 }
 
 
-.icones-sociais a:hover {
-  color: #1c1c1c;
-  transform: translateY(-6px);
+.icones-sociais a:hover { /* hover é o movimento de passar o mouse em cima*/
+  color: #1c1c1c; /* define a cor */
+  transform: translateY(-6px); /* sobe o icone 6 px para cima (- y significa subir) */
 }
 
-.icone-facebook  {
+.icone-facebook {
   color: #1877f2;
 }
-.icone-twitter  {
+.icone-twitter {
   color: #1da1f2;
 }
-.icone-instagram  {
+.icone-instagram {
   color: #e1306c;
 }
-.icone-youtube  {
+.icone-youtube {
   color: #ff0000;
 }
 
@@ -53,7 +53,7 @@ body {
 .navbar {
   font-family: "Poppins", sans-serif;
   background: linear-gradient(90deg, #2A0FE0 0%, #6C1AC7 60%, #3A0A6E 100%);
-  border-bottom: 2px solid #632ac5;
+  border-bottom: 2px solid #632ac5; /* */
   transition: 0.4s;
   position: sticky;
   top: 0;
