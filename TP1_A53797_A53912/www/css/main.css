@@ -48,14 +48,15 @@ body {
 .direitos-reservados {
   color: #ffffff;
   font-family: "Comic Sans MS", sans-serif;
+  text-align: right;
 }
 
 .navbar {
   font-family: "Poppins", sans-serif;
   background: linear-gradient(90deg, #2A0FE0 0%, #6C1AC7 60%, #3A0A6E 100%);
-  border-bottom: 2px solid #632ac5; /* */
-  transition: 0.4s;
-  position: sticky;
+  border-bottom: 2px solid #632ac5; /* define o tamanho da borda debaixo */
+  transition: 0.3s; /* a navbar inicializa com uma animação */
+  position: sticky; /* coloca a navbar sempre no topo quando damos scroll */
   top: 0;
   z-index: 1030;
 }
@@ -65,7 +66,7 @@ header {
 }
 
 .navbar-brand {
-  color: #f8f8f8 !important;
+  color: #f8f8f8;
   font-size: 28px;
   font-weight: bold;
   border: 2px solid #632ac5;
@@ -73,13 +74,13 @@ header {
 }
 
 .navbar-brand:hover {
-  color: white !important;
+  color: white;
   background: #632ac5;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 16px rgba(255, 255, 255, 0.4);
 }
 
 .nav-link {
-  color: white !important;
+  color: white;
   font-size: 18px;
   margin-left: 20px;
   transition: 0.3s;
@@ -118,15 +119,15 @@ header {
   transition: all 0.5s ease;
 }
 
-.change.bar1 {
+.change .bar1 {
   transform: rotate(-45deg) translate(-5px, 6px);
 }
 
-.change.bar2 {
+.change .bar2 {
   opacity: 0;
 }
 
-.change.bar3 {
+.change .bar3 {
   transform: rotate(45deg) translate(-5px, -8px);
 }
 
@@ -349,7 +350,7 @@ header {
 
 .about-up-trapeze:hover,
 .about-down-trapeze:hover {
-  background: #2a9134;
+  background: purple;
 }
 
 .about-up-trapeze,
@@ -358,8 +359,8 @@ header {
   border-radius: 5px;
 }
 
-.about-up-trapeze:hover.about-trapeze-content,
-.about-down-trapeze:hover.about-trapeze-content {
+.about-up-trapeze:hover .about-trapeze-content,
+.about-down-trapeze:hover .about-trapeze-content {
   color: #000000;
 }
 
