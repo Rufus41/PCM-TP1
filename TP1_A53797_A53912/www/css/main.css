@@ -1,4 +1,5 @@
-:root { /* Root é o elemento mais alto que permite guardar variáveis para usar em diversos elementos */
+:root {
+  /* Root é o elemento mais alto que permite guardar variáveis para usar em diversos elementos */
   --roxo-principal: #7a4fb5; /* define-se uma variável fixa com a cor roxo */
 }
 
@@ -9,27 +10,43 @@ html {
 body {
   margin: 0; /* define o tamanho da margem a 0 */
   padding: 0; /* define o espaçamento interno a 0 */
-  font-family: "Poppins", sans-serif; /* tipo de letra usado senão encontrar a 1º usa a 2º como garantia */
+  font-family:
+    "Poppins", sans-serif; /* tipo de letra usado senão encontrar a 1º usa a 2º como garantia */
   box-sizing: border-box; /* define o tamanho numa caixa (box) de padding e border para que não saia fora e desconfigure a página */
   overflow-x: hidden; /* caso o texto extenda-se na horizontal a barra de scroll horizontal fica escondida */
-  background: radial-gradient(circle at 15% 20%, #2c2a4a 0%, #1c1a30 45%, #151326 100%); /* define o fundo da página inteira */
+  background: radial-gradient(
+    circle at 15% 20%,
+    #2c2a4a 0%,
+    #1c1a30 45%,
+    #151326 100%
+  ); /* define o fundo da página inteira */
 }
 
-.topbar, 
+.topbar,
 .bottom-bar {
-  background: linear-gradient(90deg, #2A0FE0 0%, #6C1AC7 60%, #3A0A6E 100%); /* Gradiente linear em forma de reta (90° vai da Esq para Dir) com paragens em 0%, 60% e 100% */
+  background: linear-gradient(
+    90deg,
+    #2a0fe0 0%,
+    #6c1ac7 60%,
+    #3a0a6e 100%
+  ); /* Gradiente linear em forma de reta (90° vai da Esq para Dir) com paragens em 0%, 60% e 100% */
   min-height: 50px; /* define um tamanho minimo de 50 píxeis, se o texto passar em telemóveis a barra aumenta, mas nunca é menos de 50 */
 }
 
-.icones-sociais a { /* o "a" refere-se a anchor servindo de hiperligação, se fosse só ".icones-sociais" iria ser aplicado os efeitos à divisão e não a cada icon */
+.icones-sociais a {
+  /* o "a" refere-se a anchor servindo de hiperligação, se fosse só ".icones-sociais" iria ser aplicado os efeitos à divisão e não a cada icon */
   border: none; /* remove a borda dos elementos */
-  transition: background-color 0.3s ease, transform 0.3s ease; /* cria uma animação suave que muda de cor em 0.3s suavemente (ease) e faz uma transformação que definimos depois */
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease; /* cria uma animação suave que muda de cor em 0.3s suavemente (ease) e faz uma transformação que definimos depois */
 }
 
-
-.icones-sociais a:hover { /* hover é o movimento de passar o mouse em cima*/
+.icones-sociais a:hover {
+  /* hover é o movimento de passar o mouse em cima*/
   color: #1c1c1c; /* define a cor */
-  transform: translateY(-6px); /* sobe o icone 6 px para cima (- y significa subir) */
+  transform: translateY(
+    -6px
+  ); /* sobe o icone 6 px para cima (- y significa subir) */
 }
 
 .icone-facebook {
@@ -53,7 +70,7 @@ body {
 
 .navbar {
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(90deg, #2A0FE0 0%, #6C1AC7 60%, #3A0A6E 100%);
+  background: linear-gradient(90deg, #2a0fe0 0%, #6c1ac7 60%, #3a0a6e 100%);
   border-bottom: 2px solid #632ac5; /* define o tamanho da borda debaixo */
   transition: 0.3s; /* a navbar inicializa com uma animação */
   position: sticky; /* coloca a navbar sempre no topo quando damos scroll */
@@ -76,7 +93,9 @@ header {
 .navbar-brand:hover {
   color: white;
   background: #632ac5;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 16px rgba(255, 255, 255, 0.4);
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 0.6),
+    0 0 16px rgba(255, 255, 255, 0.4);
 }
 
 .nav-link {
@@ -87,7 +106,9 @@ header {
 }
 
 .nav-link:hover {
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 16px rgba(255, 255, 255, 0.4);
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 0.6),
+    0 0 16px rgba(255, 255, 255, 0.4);
 }
 
 .nav-link.active {
@@ -115,7 +136,7 @@ header {
   width: 23px;
   height: 2px;
   margin: 5px;
-  background: #582a91;
+  background: #c9c2d1;
   transition: all 0.5s ease;
 }
 
@@ -135,7 +156,12 @@ header {
 .skills-section,
 .about-section,
 .projects-section {
-  background: radial-gradient(circle at 15% 20%, #2c2a4a 0%, #1c1a30 45%, #151326 100%);
+  background: radial-gradient(
+    circle at 15% 20%,
+    #2c2a4a 0%,
+    #1c1a30 45%,
+    #151326 100%
+  );
   background-attachment: fixed;
 }
 
@@ -172,8 +198,10 @@ header {
   background-color: var(--roxo-principal);
   color: #ffffff;
   border: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  }
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
 
 .general-button:hover,
 .btn-back-top:hover {
@@ -201,9 +229,12 @@ header {
   border: 2px solid #ffffff;
   color: #ffffff;
   border-radius: 0;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
 }
-  
+
 .btn-submit:hover {
   background-color: var(--roxo-principal);
   border-color: var(--roxo-principal);
@@ -223,7 +254,11 @@ header {
   width: 220px;
   height: 220px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(193, 84, 111, 0.45), transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(193, 84, 111, 0.45),
+    transparent 70%
+  );
   pointer-events: none;
 }
 
@@ -255,13 +290,15 @@ header {
   color: #b7b4c9;
 }
 
-
 .skill-card {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-top: 4px solid transparent;
   border-radius: 14px;
-  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .skill-card:hover {
@@ -374,7 +411,6 @@ header {
   color: white;
 }
 
-
 .about-section {
   overflow-x: hidden;
 }
@@ -434,39 +470,52 @@ header {
   border-radius: 20px;
   background: rgba(122, 79, 181, 0.1);
   border: 2px solid rgba(122, 79, 181, 0.45);
-  box-shadow: 0 0 25px rgba(122, 79, 181, 0.2), inset 0 0 20px rgba(122, 79, 181, 0.08);
+  box-shadow:
+    0 0 25px rgba(122, 79, 181, 0.2),
+    inset 0 0 20px rgba(122, 79, 181, 0.08);
   z-index: -1;
 }
 
 .progress-bar {
   width: 0;
-  animation: fillBar 1.5s ease forwards, progress-bar-stripes 1s linear infinite;
+  animation:
+    fillBar 1.5s ease forwards,
+    progress-bar-stripes 1s linear infinite;
 }
 
 .bar-html {
   background-color: #e34c26;
-  box-shadow: 0 0 8px #e34c26, 0 0 20px rgba(227, 76, 38, 0.8);
+  box-shadow:
+    0 0 8px #e34c26,
+    0 0 20px rgba(227, 76, 38, 0.8);
 }
 
 .bar-python {
   background-color: #3776ab;
-  box-shadow: 0 0 8px #3776ab, 0 0 20px rgba(55, 118, 171, 0.8);
+  box-shadow:
+    0 0 8px #3776ab,
+    0 0 20px rgba(55, 118, 171, 0.8);
 }
 
 .bar-java {
   background-color: #f89820;
-  box-shadow: 0 0 8px #f89820, 0 0 10px rgba(248, 152, 32, 0.8);
+  box-shadow:
+    0 0 8px #f89820,
+    0 0 10px rgba(248, 152, 32, 0.8);
 }
 
 .bar-css {
   background-color: #531bd8;
-  box-shadow: 0 0 8px #531bd8, 0 0 20px rgba(83, 27, 216, 0.8);
+  box-shadow:
+    0 0 8px #531bd8,
+    0 0 20px rgba(83, 27, 216, 0.8);
 }
 
 @keyframes fillBar {
   from {
     width: 0;
-  } to {
+  }
+  to {
     width: var(--progress);
   }
 }
@@ -618,7 +667,9 @@ header {
 }
 
 .contact-bg {
-  background-image: linear-gradient(rgba(26, 16, 50, 0.7), rgba(26, 16, 50, 0.7)), url("../images/contactMe.png");
+  background-image:
+    linear-gradient(rgba(26, 16, 50, 0.7), rgba(26, 16, 50, 0.7)),
+    url("../images/contactMe.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -637,7 +688,9 @@ header {
   font-weight: 750;
   font-size: clamp(3rem, 8vw, 6rem);
   color: #1000f1;
-  text-shadow: 0 0 10px rgb(255, 255, 255), 0 0 35px rgba(42, 145, 52, 0.35);
+  text-shadow:
+    0 0 10px rgb(255, 255, 255),
+    0 0 35px rgba(42, 145, 52, 0.35);
   line-height: 1.1;
 }
 
