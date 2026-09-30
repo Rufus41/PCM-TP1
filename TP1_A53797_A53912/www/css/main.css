@@ -25,9 +25,7 @@ body {
 .icones-sociais a {
   /* o "a" refere-se a anchor servindo de hiperligação, se fosse só ".icones-sociais" iria ser aplicado os efeitos à divisão e não a cada icon */
   border: none; /* remove a borda dos elementos */
-  transition:
-    background-color 0.3s ease,
-    transform 0.3s ease; /* cria uma animação suave que muda de cor em 0.3s suavemente (ease) e faz uma transformação que definimos depois */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* cria uma animação suave que muda de cor em 0.3s suavemente (ease) e faz uma transformação que definimos depois */
 }
 
 .icones-sociais a:hover {
@@ -176,9 +174,7 @@ header {
   background-color: var(--roxo-principal);
   color: #ffffff;
   border: none;
-  transition:
-    background-color 0.3s ease,
-    transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .general-button:hover,
@@ -207,10 +203,7 @@ header {
   border: 2px solid #ffffff;
   color: #ffffff;
   border-radius: 0;
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease,transform 0.3s ease;
 }
 
 .btn-submit:hover {
