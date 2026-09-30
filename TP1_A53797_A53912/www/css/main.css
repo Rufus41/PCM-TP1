@@ -10,26 +10,15 @@ html {
 body {
   margin: 0; /* define o tamanho da margem a 0 */
   padding: 0; /* define o espaçamento interno a 0 */
-  font-family:
-    "Poppins", sans-serif; /* tipo de letra usado senão encontrar a 1º usa a 2º como garantia */
+  font-family: "Poppins", sans-serif; /* tipo de letra usado senão encontrar a 1º usa a 2º como garantia */
   box-sizing: border-box; /* define o tamanho numa caixa (box) de padding e border para que não saia fora e desconfigure a página */
   overflow-x: hidden; /* caso o texto extenda-se na horizontal a barra de scroll horizontal fica escondida */
-  background: radial-gradient(
-    circle at 15% 20%,
-    #2c2a4a 0%,
-    #1c1a30 45%,
-    #151326 100%
-  ); /* define o fundo da página inteira */
+  background: radial-gradient(circle at 15% 20% ,#2c2a4a 0%,#1c1a30 45%,#151326 100%); /* define o fundo da página inteira */
 }
 
 .topbar,
 .bottom-bar {
-  background: linear-gradient(
-    90deg,
-    #2a0fe0 0%,
-    #6c1ac7 60%,
-    #3a0a6e 100%
-  ); /* Gradiente linear em forma de reta (90° vai da Esq para Dir) com paragens em 0%, 60% e 100% */
+  background: linear-gradient(90deg,#2a0fe0 0%, #6c1ac7 60%,#3a0a6e 100%); /* Gradiente linear em forma de reta (90° vai da Esq para Dir) com paragens em 0%, 60% e 100% */
   min-height: 50px; /* define um tamanho minimo de 50 píxeis, se o texto passar em telemóveis a barra aumenta, mas nunca é menos de 50 */
 }
 
@@ -44,9 +33,7 @@ body {
 .icones-sociais a:hover {
   /* hover é o movimento de passar o mouse em cima*/
   color: #1c1c1c; /* define a cor */
-  transform: translateY(
-    -6px
-  ); /* sobe o icone 6 px para cima (- y significa subir) */
+  transform: translateY(-6px); /* sobe o icone 6 px para cima (- y significa subir) */
 }
 
 .icone-facebook {
@@ -93,9 +80,7 @@ header {
 .navbar-brand:hover {
   color: white;
   background: #632ac5;
-  text-shadow:
-    0 0 8px rgba(255, 255, 255, 0.6),
-    0 0 16px rgba(255, 255, 255, 0.4);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 16px rgba(255, 255, 255, 0.4);
 }
 
 .nav-link {
@@ -106,9 +91,7 @@ header {
 }
 
 .nav-link:hover {
-  text-shadow:
-    0 0 8px rgba(255, 255, 255, 0.6),
-    0 0 16px rgba(255, 255, 255, 0.4);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 16px rgba(255, 255, 255, 0.4);
 }
 
 .nav-link.active {
@@ -156,12 +139,7 @@ header {
 .skills-section,
 .about-section,
 .projects-section {
-  background: radial-gradient(
-    circle at 15% 20%,
-    #2c2a4a 0%,
-    #1c1a30 45%,
-    #151326 100%
-  );
+  background: radial-gradient(circle at 15% 20%, #2c2a4a 0%, #1c1a30 45%, #151326 100%);
   background-attachment: fixed;
 }
 
@@ -254,11 +232,7 @@ header {
   width: 220px;
   height: 220px;
   border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(193, 84, 111, 0.45),
-    transparent 70%
-  );
+  background: radial-gradient(circle, rgba(193, 84, 111, 0.45), transparent 70%);
   pointer-events: none;
 }
 
