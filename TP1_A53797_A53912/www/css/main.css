@@ -1,6 +1,7 @@
 :root {
   /* Root é o elemento mais alto que permite guardar variáveis para usar em diversos elementos */
   --roxo-principal: #7a4fb5; /* define-se uma variável fixa com a cor roxo */
+  --gradiente-barra: linear-gradient(90deg, #2a0fe0 0%, #6c1ac7 60%, #3a0a6e 100%); /* Gradiente linear em forma de reta (90° vai da Esq para Dir) com paragens em 0%, 60% e 100% */
 }
 
 html {
@@ -8,24 +9,21 @@ html {
 }
 
 body {
-  margin: 0; /* define o tamanho da margem a 0 */
   padding: 0; /* define o espaçamento interno a 0 */
   font-family: "Poppins", sans-serif; /* tipo de letra usado senão encontrar a 1º usa a 2º como garantia */
-  box-sizing: border-box; /* define o tamanho numa caixa (box) de padding e border para que não saia fora e desconfigure a página */
   overflow-x: hidden; /* caso o texto extenda-se na horizontal a barra de scroll horizontal fica escondida */
   background: radial-gradient(circle at 15% 20% ,#2c2a4a 0%,#1c1a30 45%,#151326 100%); /* define o fundo da página inteira */
 }
 
 .topbar,
 .bottom-bar {
-  background: linear-gradient(90deg,#2a0fe0 0%, #6c1ac7 60%,#3a0a6e 100%); /* Gradiente linear em forma de reta (90° vai da Esq para Dir) com paragens em 0%, 60% e 100% */
+  background: var(--gradiente-barra); /* var() vai buscar o valor de uma variável criada no :root */
   min-height: 50px; /* define um tamanho minimo de 50 píxeis, se o texto passar em telemóveis a barra aumenta, mas nunca é menos de 50 */
 }
 
 .icones-sociais a {
   /* o "a" refere-se a anchor servindo de hiperligação, se fosse só ".icones-sociais" iria ser aplicado os efeitos à divisão e não a cada icon */
-  border: none; /* remove a borda dos elementos */
-  transition: background-color 0.3s ease, transform 0.3s ease; /* cria uma animação suave que muda de cor em 0.3s suavemente (ease) e faz uma transformação que definimos depois */
+  transition: color 0.3s ease, transform 0.3s ease; /* cria uma animação suave que muda de cor em 0.3s suavemente (ease) e faz uma transformação que definimos depois */
 }
 
 .icones-sociais a:hover {
@@ -50,51 +48,45 @@ body {
 .direitos-reservados {
   color: #ffffff;
   font-family: "Comic Sans MS", sans-serif;
-  text-align: right;
+  text-align: right; /* alinha o texto (à direita) */
 }
 
 .navbar {
-  font-family: "Poppins", sans-serif;
-  background: linear-gradient(90deg, #2a0fe0 0%, #6c1ac7 60%, #3a0a6e 100%);
+  background: var(--gradiente-barra);
   border-bottom: 2px solid #632ac5; /* define o tamanho da borda debaixo */
-  transition: 0.3s; /* a navbar inicializa com uma animação */
   position: sticky; /* coloca a navbar sempre no topo quando damos scroll */
-  top: 0;
-  z-index: 1030;
+  top: 0; /* distância ao topo (0 = encosta ao topo) */
+  z-index: 1030; /* define quem fica à frente: o número maior fica por cima dos outros */
 }
 
 header {
-  display: contents;
+  display: contents; /* define como o elemento se comporta (contents = o header deixa de ser uma caixa e só conta o que tem dentro; flex = põe os elementos de dentro lado a lado
+  no bootstrap equivale a d-flex) */
 }
 
 .navbar-brand {
   color: #f8f8f8;
-  font-size: 28px;
-  font-weight: bold;
-  border: 2px solid #632ac5;
+  font-size: 28px; /* define o tamanho da letra */
+  font-weight: bold; /* define a espessura da letra (bold = negrito) */
+  border: 2px solid #632ac5; /* define a borda: espessura, tipo de linha (solid = contínua) e cor */
   padding: 5px 15px;
 }
 
 .navbar-brand:hover {
   color: white;
   background: #632ac5;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 16px rgba(255, 255, 255, 0.4);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 16px rgba(255, 255, 255, 0.4); /* cria um brilho à volta do texto (desvio X, desvio Y, desfoque e cor); rgba = cor com transparência (o último número vai de 0 a 1) */
 }
 
 .nav-link {
   color: white;
   font-size: 18px;
-  margin-left: 20px;
+  margin-left: 20px; /* define o espaço por fora, só do lado esquerdo de cada item da navbar*/
   transition: 0.3s;
 }
 
 .nav-link:hover {
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 16px rgba(255, 255, 255, 0.4);
-}
-
-.nav-link.active {
-  color: #632ac5 !important;
-  font-weight: bold;
 }
 
 .dropdown-menu {
@@ -114,9 +106,9 @@ header {
 .bar1,
 .bar2,
 .bar3 {
-  width: 23px;
-  height: 2px;
-  margin: 5px;
+  width: 23px; /* define a largura */
+  height: 2px; /* define a altura */
+  margin: 5px; /* define o espaço por fora do elemento, nos 4 lados */
   background: #c9c2d1;
   transition: all 0.5s ease;
 }
@@ -126,11 +118,11 @@ header {
 }
 
 .change .bar2 {
-  opacity: 0;
+  opacity: 0; /* define a transparência (0 = invisível, 1 = totalmente visível) */
 }
 
 .change .bar3 {
-  transform: rotate(45deg) translate(-5px, -8px);
+  transform: rotate(45deg) translate(-4px, -5px);
 }
 
 #home,
@@ -138,29 +130,30 @@ header {
 .about-section,
 .projects-section {
   background: radial-gradient(circle at 15% 20%, #2c2a4a 0%, #1c1a30 45%, #151326 100%);
-  background-attachment: fixed;
+  background-attachment: fixed; /* fixed = o fundo fica parado enquanto fazes scroll */
 }
 
 .carousel-item::before {
-  content: "";
-  position: absolute;
-  inset: 0;
+  /* ::before cria um elemento extra antes do conteúdo (aqui serve de camada verde por cima da imagem) */
+  content: ""; /* define o conteúdo do ::before/::after ("" = vazio, só serve para criar a caixa) */
+  position: absolute; /* torna o conteúdo invísivel ao ponto como se ele não existisse para os outros (não ocupar o espaço) */
+  inset: 0; /* define top, right, bottom e left de uma vez (0 = encosta aos 4 lados), ou seja o poligono verde ocupa a região toda do carousel */
   background: rgba(42, 145, 52, 0.35);
   z-index: 1;
 }
 
 .carousel-item {
   min-height: 60vh;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 95%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 95%); /* corta o elemento numa forma; polygon = lista de pontos que desenham essa forma */
 }
 
 .carousel-item img {
   height: 60vh;
-  object-fit: cover;
+  object-fit: cover; /* ajusta a imagem à caixa (cover = preenche tudo e corta o que sobra) */
 }
 
 .carousel-indicators {
-  bottom: 70px;
+  bottom: 13vh; /* distância ao fundo */
 }
 
 .carousel-caption {
@@ -171,7 +164,7 @@ header {
 }
 
 .general-button {
-  background-color: var(--roxo-principal);
+  background-color: var(--roxo-principal); /* define a cor de fundo */
   color: #ffffff;
   border: none;
   transition: background-color 0.3s ease, transform 0.3s ease;
@@ -193,8 +186,8 @@ header {
   background: var(--roxo-principal);
   color: #ffffff;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center; /* alinha os elementos de dentro na vertical (ao centro) */
+  justify-content: center; /* alinha os elementos de dentro na horizontal (ao centro) */
   transition: transform 0.3s ease;
 }
 
@@ -202,13 +195,13 @@ header {
   background-color: transparent;
   border: 2px solid #ffffff;
   color: #ffffff;
-  border-radius: 0;
-  transition: background-color 0.3s ease, color 0.3s ease,transform 0.3s ease;
+  border-radius: 0; /* arredonda os cantos (0 = cantos retos, 50% = círculo) */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .btn-submit:hover {
   background-color: var(--roxo-principal);
-  border-color: var(--roxo-principal);
+  border-color: var(--roxo-principal); /* muda só a cor da borda */
   color: #ffffff;
   transform: translateY(-3px);
 }
@@ -221,19 +214,20 @@ header {
   content: "";
   position: absolute;
   top: -40px;
-  right: -40px;
+  right: 0px; /* distância ao lado direito (valor negativo empurra para direita) */
   width: 220px;
   height: 220px;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(193, 84, 111, 0.45), transparent 70%);
-  pointer-events: none;
+  pointer-events: none; /* none = o rato ignora este elemento (os cliques passam para o que está por baixo) */
 }
 
 .skills-section::after {
+  /* ::after é como o ::before, mas cria o elemento depois do conteúdo */
   content: "";
   position: absolute;
   bottom: -140px;
-  left: -20px;
+  left: -20px; /* distância ao lado esquerdo */
   width: 260px;
   height: 260px;
   border-radius: 50%;
@@ -248,9 +242,9 @@ header {
 
 .preTitle-eyebrow {
   font-size: 12px;
-  letter-spacing: 3px;
+  letter-spacing: 3px; /* define o espaço entre as letras */
   color: #d9a0b5;
-  text-transform: uppercase;
+  text-transform: uppercase; /* uppercase = escreve tudo em maiúsculas */
 }
 
 .subtitle {
@@ -260,12 +254,9 @@ header {
 .skill-card {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-top: 4px solid transparent;
+  border-top: 4px solid var(--cor-inicio); /* define só a borda de cima */
   border-radius: 14px;
-  transition:
-    transform 0.2s ease,
-    background-color 0.2s ease,
-    border-color 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .skill-card:hover {
@@ -288,46 +279,38 @@ header {
   justify-content: center;
   color: #ffffff;
   font-size: 20px;
-  margin-bottom: 12px;
+  margin-bottom: 12px; /* define o espaço por fora, só em baixo */
+  background: linear-gradient(135deg, var(--cor-inicio), var(--cor-fim));
 }
 
 .skill-card-1 {
-  border-top-color: #3954cb;
-}
-.skill-card-1 .skill-icon {
-  background: linear-gradient(135deg, #3954cb, #7a4fb5);
+  --cor-inicio: #3954cb; /* variável própria de cada cartão: cor onde começa o gradiente e cor da borda de cima */
+  --cor-fim: #7a4fb5; /* variável própria de cada cartão: cor onde acaba o gradiente */
 }
 
 .skill-card-2 {
-  border-top-color: #7a4fb5;
-}
-.skill-card-2 .skill-icon {
-  background: linear-gradient(135deg, #7a4fb5, #c1546f);
+  --cor-inicio: #7a4fb5;
+  --cor-fim: #c1546f;
 }
 
 .skill-card-3 {
-  border-top-color: #c1546f;
-}
-.skill-card-3 .skill-icon {
-  background: linear-gradient(135deg, #c1546f, #ea755b);
+  --cor-inicio: #c1546f;
+  --cor-fim: #ea755b;
 }
 
 .skill-card-4 {
-  border-top-color: #ea755b;
-}
-
-.skill-card-4 .skill-icon {
-  background: linear-gradient(135deg, #ea755b, #f2a154);
+  --cor-inicio: #ea755b;
+  --cor-fim: #f2a154;
 }
 
 .about-up-trapeze {
   min-height: 230px;
   height: 230px;
   background: linear-gradient(45deg, #ff4d00, #fd6600);
-  float: none;
-  margin-right: 0;
-  transform: rotate(-180deg);
-  display: flex !important;
+  float: none; /* faz o elemento flutuar para um lado (none = anula isso) */
+  margin-right: 0px; /* define o espaço por fora, só do lado direito */
+  transform: rotate(180deg);
+  display: flex !important; /* !important faz esta regra ganhar a qualquer outra (aqui, às do Bootstrap) */
   align-items: center;
   justify-content: center;
 }
@@ -359,7 +342,6 @@ header {
 
 .about-up-trapeze,
 .about-down-trapeze {
-  transition: background-color 0.3s ease;
   border-radius: 5px;
 }
 
@@ -383,39 +365,39 @@ header {
 }
 
 .about-content {
-  margin-top: 25px;
+  margin-top: 60px; /* define o espaço por fora, só em cima */
   transform: scale(1.1);
-  transform-origin: bottom left;
+  transform-origin: bottom left; /* define o ponto de onde a transformação parte (canto inferior esquerdo) */
 }
 
 .about-image {
-  max-width: 95%;
+  max-width: 95%; /* define a largura máxima */
   height: auto;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35); /* cria uma sombra à volta da caixa (desvio X, desvio Y, desfoque e cor) */
 }
 
 .about-description {
   max-width: 500px;
   margin: 0 auto 25px;
   color: #d5d2e3;
-  line-height: 1.6;
+  line-height: 1.6; /* define o espaço entre as linhas do texto */
 }
 
 .progress-row {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px; /* define o espaço entre os elementos de dentro */
 }
 
 .progress-row .progress {
-  flex: 1;
-  background-color: #32294a !important;
-  overflow: visible !important;
+  flex: 1; /* 1 = este elemento ocupa todo o espaço que sobrar */
+  background-color: #32294a;
+  overflow: visible; /* o que fazer ao que sai da caixa (visible = mostra, hidden = esconde) */
 }
 
 .progress-value {
-  min-width: 45px;
+  min-width: 45px; /* define a largura mínima */
   text-align: right;
   color: white;
 }
@@ -437,48 +419,35 @@ header {
   border-radius: 20px;
   background: rgba(122, 79, 181, 0.1);
   border: 2px solid rgba(122, 79, 181, 0.45);
-  box-shadow:
-    0 0 25px rgba(122, 79, 181, 0.2),
-    inset 0 0 20px rgba(122, 79, 181, 0.08);
+  box-shadow: 0 0 25px rgba(122, 79, 181, 0.2), inset 0 0 20px rgba(122, 79, 181, 0.08);
   z-index: -1;
 }
 
 .progress-bar {
   width: 0;
-  animation:
-    fillBar 1.5s ease forwards,
-    progress-bar-stripes 1s linear infinite;
+  animation: fillBar 1.5s ease forwards, progress-bar-stripes 1s linear infinite; /* aplica animações criadas no @keyframes (nome, duração, ritmo; forwards = fica no estado final, infinite = repete sempre) */
+  background-color: var(--cor);
+  box-shadow: 0 0 8px var(--cor), 0 0 20px var(--cor);
 }
 
 .bar-html {
-  background-color: #e34c26;
-  box-shadow:
-    0 0 8px #e34c26,
-    0 0 20px rgba(227, 76, 38, 0.8);
+  --cor: #e34c26; /* variável com a cor de cada barra (é usada no .progress-bar) */
 }
 
 .bar-python {
-  background-color: #3776ab;
-  box-shadow:
-    0 0 8px #3776ab,
-    0 0 20px rgba(55, 118, 171, 0.8);
+  --cor: #3776ab;
 }
 
 .bar-java {
-  background-color: #f89820;
-  box-shadow:
-    0 0 8px #f89820,
-    0 0 10px rgba(248, 152, 32, 0.8);
+  --cor: #f89820;
 }
 
 .bar-css {
-  background-color: #531bd8;
-  box-shadow:
-    0 0 8px #531bd8,
-    0 0 20px rgba(83, 27, 216, 0.8);
+  --cor: #531bd8;
 }
 
 @keyframes fillBar {
+  /* @keyframes cria uma animação passo a passo (from = início, to = fim) que depois é usada com animation */
   from {
     width: 0;
   }
@@ -487,61 +456,11 @@ header {
   }
 }
 
-@media (max-width: 768px) {
-  .about-content {
-    transform: none;
-    margin-top: 25px;
-  }
-
-  .purple-rectangle {
-    width: 92%;
-    margin: 0 auto;
-    padding: 35px 20px;
-    box-sizing: border-box;
-  }
-
-  .purple-rectangle::before {
-    width: 100%;
-    height: 100%;
-    transform: translate(-50%, -50%);
-    border-radius: 18px;
-  }
-
-  .progress-row {
-    gap: 10px;
-  }
-
-  .progress-value {
-    min-width: 40px;
-    font-size: 16px;
-  }
-
-  .navbar-brand {
-    font-size: 20px;
-    padding: 4px 10px;
-  }
-}
-
-.btn-resume {
-  background: var(--roxo-principal);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 10px 24px;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.btn-resume:hover {
-  background: #1c1c1c;
-  color: white;
-  transform: translateY(-5px);
-}
-
 .project-card img {
   width: 100%;
   height: 320px;
   object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
 .project-card .card-title {
@@ -554,7 +473,7 @@ header {
 
 .project-card {
   background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px); /* aplica um efeito ao que está atrás do elemento (blur = desfocado) */
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 20px;
   overflow: hidden;
@@ -570,7 +489,7 @@ header {
 .project-image-container {
   position: relative;
   overflow: hidden;
-  cursor: pointer;
+  cursor: pointer; /* muda o cursor do rato (pointer = mãozinha) */
 }
 
 .image-overlay {
@@ -598,7 +517,7 @@ header {
   opacity: 1;
 }
 
-.project-image-container:hover .project-image {
+.project-image-container:hover img {
   transform: scale(1.1);
 }
 
@@ -608,18 +527,19 @@ header {
 }
 
 .modal-body img {
-  max-height: 80vh;
+  max-height: 80vh; /* define a altura máxima (80vh = 80% da altura do ecrã) */
 }
 
 .project-target {
-  scroll-margin-top: 120px;
+  scroll-margin-top: 210px; /* deixa espaço em cima quando se navega até este elemento através de um link */
 }
 
 .project-target:target .project-card {
-  animation: projectHighlight 1s ease;
+  /* :target aplica-se ao elemento para onde o link (#project1, #project2...) acabou de levar */
+  animation: prjHighlight 1s ease;
 }
 
-@keyframes projectHighlight {
+@keyframes prjHighlight {
   0% {
     box-shadow: 0 0 0 rgba(0, 123, 255, 0);
   }
@@ -629,35 +549,25 @@ header {
   }
 
   100% {
-    box-shadow: 0 0 0 rgba(0, 123, 255, 0);
+    box-shadow: 0 0 0 rgb(0, 117, 243);
   }
 }
 
 .contact-bg {
-  background-image:
-    linear-gradient(rgba(26, 16, 50, 0.7), rgba(26, 16, 50, 0.7)),
-    url("../images/contactMe.png");
-  background-size: cover;
-  background-position: center;
+  background-image: linear-gradient(rgba(26, 16, 50, 0.7), rgba(26, 16, 50, 0.7)), url("../images/contactMe.png"); /* define a imagem de fundo (url = caminho do ficheiro); aqui há um gradiente escuro por cima da imagem */
+  background-size: cover; /* cover = a imagem cobre toda a área */
+  background-position: center; /* center = a imagem fica centrada */
   background-attachment: fixed;
-  padding-top: 7rem !important;
-  padding-bottom: 10rem !important;
-}
-
-@media (max-width: 768px) {
-  .contact-bg {
-    background-attachment: scroll;
-  }
+  padding-top: 112px !important; /* define o espaço por dentro, só em cima */
+  padding-bottom: 160px !important; /* define o espaço por dentro, só em baixo */
 }
 
 .contact-title {
   font-family: "Pacifico", cursive;
   font-weight: 750;
-  font-size: clamp(3rem, 8vw, 6rem);
+  font-size: clamp(48px, 8vw, 6rem); /* clamp(mínimo, ideal, máximo) ajusta o tamanho ao ecrã sem sair dos limites */
   color: #1000f1;
-  text-shadow:
-    0 0 10px rgb(255, 255, 255),
-    0 0 35px rgba(42, 145, 52, 0.35);
+  text-shadow: 0 0 10px rgb(255, 255, 255), 0 0 35px rgba(42, 145, 52, 0.35);
   line-height: 1.1;
 }
 
@@ -666,14 +576,10 @@ header {
   color: #d795ad;
   font-size: 30px;
 }
-.btn-back-top-lg {
-  width: 60px;
-  height: 60px;
-  font-size: 22px;
-}
 
 .contact-input,
 .contact-input:focus {
+  /* :focus aplica-se quando clicas no campo para escrever */
   background-color: transparent;
   border: none;
   border-bottom: 2px solid #ffffff;
@@ -683,10 +589,47 @@ header {
 }
 
 .contact-input::placeholder {
+  /* ::placeholder é o texto de exemplo que aparece enquanto o campo está vazio */
   color: rgba(255, 255, 255, 0.65);
-  font-style: italic;
+  font-style: italic; /* italic = letra em itálico */
 }
 
 .contact-input:focus {
-  border-bottom-color: var(--roxo-principal);
+  border-bottom-color: var(--roxo-principal); /* muda só a cor da borda de baixo */
+}
+
+@media (max-width: 768px) {
+  /* @media aplica estas regras só quando o ecrã tem no máximo 768px de largura (telemóveis e tablets) */
+  .about-content {
+    transform: none;
+  }
+
+  .purple-rectangle {
+    width: 92%;
+    margin: 0 auto;
+    padding: 35px 20px;
+  }
+
+  .purple-rectangle::before {
+    transform: translate(-50%, -50%);
+    border-radius: 18px;
+  }
+
+  .progress-row {
+    gap: 10px;
+  }
+
+  .progress-value {
+    min-width: 40px;
+    font-size: 16px;
+  }
+
+  .navbar-brand {
+    font-size: 20px;
+    padding: 4px 10px;
+  }
+
+  .contact-bg {
+    background-attachment: scroll;
+  }
 }
