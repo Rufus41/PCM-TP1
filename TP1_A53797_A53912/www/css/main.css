@@ -11,7 +11,7 @@ html {
 body {
   padding: 0; /* define o espaçamento interno a 0 */
   font-family: "Poppins", sans-serif; /* tipo de letra usado senão encontrar a 1º usa a 2º como garantia */
-  overflow-x: hidden; /* caso o texto extenda-se na horizontal a barra de scroll horizontal fica escondida */
+  overflow-x: hidden; /* caso o texto extenda-se na horizontal a barra de scroll horizontal fica escondida */ /* CSS3 */
   background: radial-gradient(circle at 15% 20% ,#2c2a4a 0%,#1c1a30 45%,#151326 100%); /* define o fundo da página inteira */
 }
 
@@ -23,13 +23,13 @@ body {
 
 .icones-sociais a {
   /* o "a" refere-se a anchor servindo de hiperligação, se fosse só ".icones-sociais" iria ser aplicado os efeitos à divisão e não a cada icon */
-  transition: color 0.3s ease, transform 0.3s ease; /* cria uma animação suave que muda de cor em 0.3s suavemente (ease) e faz uma transformação que definimos depois */
+  transition: color 0.3s ease, transform 0.3s ease; /* cria uma animação suave que muda de cor em 0.3s suavemente (ease) e faz uma transformação que definimos depois */ /* CSS3 */
 }
 
 .icones-sociais a:hover {
   /* hover é o movimento de passar o mouse em cima*/
   color: #1c1c1c; /* define a cor */
-  transform: translateY(-6px); /* sobe o icone 6 px para cima (- y significa subir) */
+  transform: translateY(-6px); /* sobe o icone 6 px para cima (- y significa subir) */ /* CSS3 */
 }
 
 .icone-facebook {
@@ -75,18 +75,18 @@ header {
 .navbar-brand:hover {
   color: white;
   background: #632ac5;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 16px rgba(255, 255, 255, 0.4); /* cria um brilho à volta do texto (desvio X, desvio Y, desfoque e cor); rgba = cor com transparência (o último número vai de 0 a 1) */
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 16px rgba(255, 255, 255, 0.4); /* cria um brilho à volta do texto (desvio X, desvio Y, desfoque e cor); rgba = cor com transparência (o último número vai de 0 a 1) */ /* CSS3 */
 }
 
 .nav-link {
   color: white;
   font-size: 18px;
   margin-left: 20px; /* define o espaço por fora, só do lado esquerdo de cada item da navbar*/
-  transition: 0.3s;
+  transition: 0.3s; /* CSS3 */
 }
 
 .nav-link:hover {
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 16px rgba(255, 255, 255, 0.4);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 16px rgba(255, 255, 255, 0.4); /* CSS3 */
 }
 
 .dropdown-menu {
@@ -110,19 +110,19 @@ header {
   height: 2px; /* define a altura */
   margin: 5px; /* define o espaço por fora do elemento, nos 4 lados */
   background: #c9c2d1;
-  transition: all 0.5s ease;
+  transition: all 0.5s ease; /* CSS3 */
 }
 
 .change .bar1 {
-  transform: rotate(-45deg) translate(-5px, 6px);
+  transform: rotate(-45deg) translate(-5px, 6px); /* CSS3 */
 }
 
 .change .bar2 {
-  opacity: 0; /* define a transparência (0 = invisível, 1 = totalmente visível) */
+  opacity: 0; /* define a transparência (0 = invisível, 1 = totalmente visível) */ /* CSS3 */
 }
 
 .change .bar3 {
-  transform: rotate(45deg) translate(-4px, -5px);
+  transform: rotate(45deg) translate(-4px, -5px); /* CSS3 */
 }
 
 #home,
@@ -160,20 +160,20 @@ header {
   z-index: 2;
   top: 50%;
   bottom: auto;
-  transform: translateY(-50%);
+  transform: translateY(-50%); /* CSS3 */
 }
 
 .general-button {
   background-color: var(--roxo-principal); /* define a cor de fundo */
   color: #ffffff;
   border: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* CSS3 */
 }
 
 .general-button:hover,
 .btn-back-top:hover {
   color: #ffffff;
-  transform: translateY(-6px);
+  transform: translateY(-6px); /* CSS3 */
 }
 
 .general-button:hover {
@@ -186,24 +186,24 @@ header {
   background: var(--roxo-principal);
   color: #ffffff;
   display: inline-flex;
-  align-items: center; /* alinha os elementos de dentro na vertical (ao centro) */
-  justify-content: center; /* alinha os elementos de dentro na horizontal (ao centro) */
-  transition: transform 0.3s ease;
+  align-items: center; /* alinha os elementos de dentro na vertical (ao centro) */ /* CSS3 */
+  justify-content: center; /* alinha os elementos de dentro na horizontal (ao centro) */ /* CSS3 */
+  transition: transform 0.3s ease; /* CSS3 */
 }
 
 .btn-submit {
   background-color: transparent;
   border: 2px solid #ffffff;
   color: #ffffff;
-  border-radius: 0; /* arredonda os cantos (0 = cantos retos, 50% = círculo) */
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  border-radius: 0; /* arredonda os cantos (0 = cantos retos, 50% = círculo) */ /* CSS3 */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* CSS3 */
 }
 
 .btn-submit:hover {
   background-color: var(--roxo-principal);
   border-color: var(--roxo-principal); /* muda só a cor da borda */
   color: #ffffff;
-  transform: translateY(-3px);
+  transform: translateY(-3px); /* CSS3 */
 }
 
 .skills-section {
@@ -217,7 +217,7 @@ header {
   right: 0px; /* distância ao lado direito (valor negativo empurra para direita) */
   width: 220px;
   height: 220px;
-  border-radius: 50%;
+  border-radius: 50%; /* CSS3 */
   background: radial-gradient(circle, rgba(193, 84, 111, 0.45), transparent 70%);
   pointer-events: none; /* none = o rato ignora este elemento (os cliques passam para o que está por baixo) */
 }
@@ -230,7 +230,7 @@ header {
   left: -20px; /* distância ao lado esquerdo */
   width: 260px;
   height: 260px;
-  border-radius: 50%;
+  border-radius: 50%; /* CSS3 */
   background: radial-gradient(circle, rgba(74, 79, 194, 0.45), transparent 70%);
   pointer-events: none;
 }
@@ -255,12 +255,12 @@ header {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-top: 4px solid var(--cor-inicio); /* define só a borda de cima */
-  border-radius: 14px;
-  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  border-radius: 14px; /* CSS3 */
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease; /* CSS3 */
 }
 
 .skill-card:hover {
-  transform: scale(1.06);
+  transform: scale(1.06); /* CSS3 */
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.28);
 }
@@ -273,10 +273,10 @@ header {
 .skill-icon {
   width: 46px;
   height: 46px;
-  border-radius: 12px;
+  border-radius: 12px; /* CSS3 */
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center; /* CSS3 */
+  justify-content: center; /* CSS3 */
   color: #ffffff;
   font-size: 20px;
   margin-bottom: 12px; /* define o espaço por fora, só em baixo */
@@ -309,10 +309,10 @@ header {
   background: linear-gradient(45deg, #ff4d00, #fd6600);
   float: none; /* faz o elemento flutuar para um lado (none = anula isso) */
   margin-right: 0px; /* define o espaço por fora, só do lado direito */
-  transform: rotate(180deg);
+  transform: rotate(180deg); /* CSS3 */
   display: flex !important; /* !important faz esta regra ganhar a qualquer outra (aqui, às do Bootstrap) */
-  align-items: center;
-  justify-content: center;
+  align-items: center; /* CSS3 */
+  justify-content: center; /* CSS3 */
 }
 
 .about-down-trapeze {
@@ -321,10 +321,10 @@ header {
   background: linear-gradient(45deg, #031297, #036eba);
   float: none;
   margin-right: 0;
-  transform: rotate(180deg);
+  transform: rotate(180deg); /* CSS3 */
   display: flex !important;
-  align-items: center;
-  justify-content: center;
+  align-items: center; /* CSS3 */
+  justify-content: center; /* CSS3 */
 }
 
 .about-up-trapeze::before {
@@ -342,7 +342,7 @@ header {
 
 .about-up-trapeze,
 .about-down-trapeze {
-  border-radius: 5px;
+  border-radius: 5px; /* CSS3 */
 }
 
 .about-up-trapeze:hover .about-trapeze-content,
@@ -352,29 +352,29 @@ header {
 
 .about-trapeze-content {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: rotate(180deg);
+  justify-content: center; /* CSS3 */
+  align-items: center; /* CSS3 */
+  transform: rotate(180deg); /* CSS3 */
   height: 100%;
   font-size: 60px;
   color: white;
 }
 
 .about-section {
-  overflow-x: hidden;
+  overflow-x: hidden; /* CSS3 */
 }
 
 .about-content {
   margin-top: 60px; /* define o espaço por fora, só em cima */
-  transform: scale(1.1);
-  transform-origin: bottom left; /* define o ponto de onde a transformação parte (canto inferior esquerdo) */
+  transform: scale(1.1); /* CSS3 */
+  transform-origin: bottom left; /* define o ponto de onde a transformação parte (canto inferior esquerdo) */ /* CSS3 */
 }
 
 .about-image {
   max-width: 95%; /* define a largura máxima */
   height: auto;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35); /* cria uma sombra à volta da caixa (desvio X, desvio Y, desfoque e cor) */
+  border-radius: 15px; /* CSS3 */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35); /* cria uma sombra à volta da caixa (desvio X, desvio Y, desfoque e cor) */ /* CSS3 */
 }
 
 .about-description {
@@ -386,12 +386,12 @@ header {
 
 .progress-row {
   display: flex;
-  align-items: center;
+  align-items: center; /* CSS3 */
   gap: 10px; /* define o espaço entre os elementos de dentro */
 }
 
 .progress-row .progress {
-  flex: 1; /* 1 = este elemento ocupa todo o espaço que sobrar */
+  flex: 1; /* 1 = este elemento ocupa todo o espaço que sobrar */ /* CSS3 */
   background-color: #32294a;
   overflow: visible; /* o que fazer ao que sai da caixa (visible = mostra, hidden = esconde) */
 }
@@ -415,19 +415,19 @@ header {
   height: 100%;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -49%);
-  border-radius: 20px;
+  transform: translate(-50%, -49%); /* CSS3 */
+  border-radius: 20px; /* CSS3 */
   background: rgba(122, 79, 181, 0.1);
   border: 2px solid rgba(122, 79, 181, 0.45);
-  box-shadow: 0 0 25px rgba(122, 79, 181, 0.2), inset 0 0 20px rgba(122, 79, 181, 0.08);
+  box-shadow: 0 0 25px rgba(122, 79, 181, 0.2), inset 0 0 20px rgba(122, 79, 181, 0.08); /* CSS3 */
   z-index: -1;
 }
 
 .progress-bar {
   width: 0;
-  animation: fillBar 1.5s ease forwards, progress-bar-stripes 1s linear infinite; /* aplica animações criadas no @keyframes (nome, duração, ritmo; forwards = fica no estado final, infinite = repete sempre) */
+  animation: fillBar 1.5s ease forwards, progress-bar-stripes 1s linear infinite; /* aplica animações criadas no @keyframes (nome, duração, ritmo; forwards = fica no estado final, infinite = repete sempre) */ /* CSS3 */
   background-color: var(--cor);
-  box-shadow: 0 0 8px var(--cor), 0 0 20px var(--cor);
+  box-shadow: 0 0 8px var(--cor), 0 0 20px var(--cor); /* CSS3 */
 }
 
 .bar-html {
@@ -446,7 +446,7 @@ header {
   --cor: #531bd8;
 }
 
-@keyframes fillBar {
+@keyframes fillBar { /* CSS3 */
   /* @keyframes cria uma animação passo a passo (from = início, to = fim) que depois é usada com animation */
   from {
     width: 0;
@@ -460,7 +460,7 @@ header {
   width: 100%;
   height: 320px;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; /* CSS3 */
 }
 
 .project-card .card-title {
@@ -475,15 +475,15 @@ header {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px); /* aplica um efeito ao que está atrás do elemento (blur = desfocado) */
   border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 20px;
+  border-radius: 20px; /* CSS3 */
   overflow: hidden;
   color: white;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; /* CSS3 */
 }
 
 .project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 25px rgba(40, 150, 70, 0.35);
+  transform: translateY(-8px); /* CSS3 */
+  box-shadow: 0 0 25px rgba(40, 150, 70, 0.35); /* CSS3 */
 }
 
 .project-image-container {
@@ -496,16 +496,16 @@ header {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); /* CSS3 */
   width: 65px;
   height: 65px;
-  border-radius: 50%;
+  border-radius: 50%; /* CSS3 */
   background: rgba(40, 150, 70, 0.85);
   display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: all 0.3s ease;
+  justify-content: center; /* CSS3 */
+  align-items: center; /* CSS3 */
+  opacity: 0; /* CSS3 */
+  transition: all 0.3s ease; /* CSS3 */
 }
 
 .image-overlay i {
@@ -514,16 +514,16 @@ header {
 }
 
 .project-image-container:hover .image-overlay {
-  opacity: 1;
+  opacity: 1; /* CSS3 */
 }
 
 .project-image-container:hover img {
-  transform: scale(1.1);
+  transform: scale(1.1); /* CSS3 */
 }
 
 .image-overlay:hover {
-  transform: translate(-50%, -50%) scale(1.15);
-  box-shadow: 0 0 20px rgba(40, 150, 70, 0.8);
+  transform: translate(-50%, -50%) scale(1.15); /* CSS3 */
+  box-shadow: 0 0 20px rgba(40, 150, 70, 0.8); /* CSS3 */
 }
 
 .modal-body img {
@@ -536,26 +536,26 @@ header {
 
 .project-target:target .project-card {
   /* :target aplica-se ao elemento para onde o link (#project1, #project2...) acabou de levar */
-  animation: prjHighlight 1s ease;
+  animation: prjHighlight 1s ease; /* CSS3 */
 }
 
-@keyframes prjHighlight {
+@keyframes prjHighlight { /* CSS3 */
   0% {
-    box-shadow: 0 0 0 rgba(0, 123, 255, 0);
+    box-shadow: 0 0 0 rgba(0, 123, 255, 0); /* CSS3 */
   }
 
   50% {
-    box-shadow: 0 0 35px rgba(0, 123, 255, 0.9);
+    box-shadow: 0 0 35px rgba(0, 123, 255, 0.9); /* CSS3 */
   }
 
   100% {
-    box-shadow: 0 0 0 rgb(0, 117, 243);
+    box-shadow: 0 0 0 rgb(0, 117, 243); /* CSS3 */
   }
 }
 
 .contact-bg {
   background-image: linear-gradient(rgba(26, 16, 50, 0.7), rgba(26, 16, 50, 0.7)), url("../images/contactMe.png"); /* define a imagem de fundo (url = caminho do ficheiro); aqui há um gradiente escuro por cima da imagem */
-  background-size: cover; /* cover = a imagem cobre toda a área */
+  background-size: cover; /* cover = a imagem cobre toda a área */ /* CSS3 */
   background-position: center; /* center = a imagem fica centrada */
   background-attachment: fixed;
   padding-top: 112px !important; /* define o espaço por dentro, só em cima */
@@ -567,7 +567,7 @@ header {
   font-weight: 750;
   font-size: clamp(48px, 8vw, 6rem); /* clamp(mínimo, ideal, máximo) ajusta o tamanho ao ecrã sem sair dos limites */
   color: #1000f1;
-  text-shadow: 0 0 10px rgb(255, 255, 255), 0 0 35px rgba(42, 145, 52, 0.35);
+  text-shadow: 0 0 10px rgb(255, 255, 255), 0 0 35px rgba(42, 145, 52, 0.35); /* CSS3 */
   line-height: 1.1;
 }
 
@@ -583,9 +583,9 @@ header {
   background-color: transparent;
   border: none;
   border-bottom: 2px solid #ffffff;
-  border-radius: 0;
+  border-radius: 0; /* CSS3 */
   color: #ffffff;
-  box-shadow: none;
+  box-shadow: none; /* CSS3 */
 }
 
 .contact-input::placeholder {
@@ -601,7 +601,7 @@ header {
 @media (max-width: 768px) {
   /* @media aplica estas regras só quando o ecrã tem no máximo 768px de largura (telemóveis e tablets) */
   .about-content {
-    transform: none;
+    transform: none; /* CSS3 */
   }
 
   .purple-rectangle {
@@ -611,8 +611,8 @@ header {
   }
 
   .purple-rectangle::before {
-    transform: translate(-50%, -50%);
-    border-radius: 18px;
+    transform: translate(-50%, -50%); /* CSS3 */
+    border-radius: 18px; /* CSS3 */
   }
 
   .progress-row {
